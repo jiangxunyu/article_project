@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>每日一文</title>
+<!--    <script src="http://libs.baidu.com/jquery/1.7.2/jquery.js"></script>-->
+        <script src="/js/jquery-3.3.1.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url("http://www.enjoybar.com/images/skin/theme_top.jpg");
+        background-position-x: center;
+        background-position-y: top;
+        background-size: initial;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;
+        background-attachment: scroll;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(238, 249, 209);
+        /*overflow:hidden;*/
+    }
+
+    #title {
+        width: 100%;
+        text-align: center;
+    }
+
+    #text {
+        width: 90%;
+        margin: auto;
+    }
+
+    #text p {
+        font-size: 20px;
+    }
+
+    #top_panel {
+        background: #33C0F5;
+        height: 48px;
+        position: relative;
+        top: 0px;
+    }
+
+    #center_panel {
+        height: 95%;
+        width: 100%;
+        margin: auto;
+        margin-top: 0px;
+        overflow: auto;
+    }
+
+    #bottom_panel {
+        width: 100%;
+        height: 58px;
+        position: fixed;
+        bottom: 0px;
+        /*display: none;*/
+    }
+
+    #leftNav {
+        height:100%;
+        width: 60%;
+        background-color: #32373D;
+        position:fixed;
+        z-index:2;
+        left:0px;
+        top:0px;
+        bottom:0px;
+        display: none;
+    }
+    #head_show{
+        margin-top: 15%;
+        margin-left: 8%;
+    }
+    #author_name{
+        margin-top: 10px;
+        margin-left: 8%;
+    }
+    #personal_introduction{
+        margin-top: -8px;
+        margin-left: 8%;
+    }
+    #article_collect{
+        margin-top: 25px;
+        margin-left: 8%;
+    }
+    #contribute{
+        margin-top: 18px;
+        margin-left: 8%;
+    }
+    #website_description{
+        margin-top: 18px;
+        margin-left: 8%;
+    }
+    #leftNav p{
+        color: whitesmoke;
+    }
+</style>
+<body>
+
+<div id="content">
+    <div class=".container-fluid">
+        <div id="top_panel" class="row" style="line-height: 48px">
+            <div id="info_panel" class="col-xs-2 col-sm-2 col-md-2" style="text-align: left">
+                <span id="author_message" class="glyphicon glyphicon-align-justify" aria-hidden="true"
+                      style="margin-left: 8%"></span>
+            </div>
+            <div id="tip_panel" class="col-xs-8 col-sm-8 col-md-8" style="text-align: center">
+                <p>每日一文</p>
+            </div>
+            <div id="common_panel" class="col-xs-2 col-sm-2 col-md-2" style="text-align: right">
+                <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true" style="margin-right: 8%"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="leftNav" style="float: left">
+    <div id="head_show">
+        <img src="/images/啊湫.jpg" alt="图片跑到外星球了" class="img-circle" style="width: 30%;height: 30%">
+    </div>
+    <div id="author_name">
+        <p>啊湫的标准大横按</p>
+    </div>
+    <div id="personal_introduction">
+        <p style="font-size: 12px">还在想一个惊天动地的自我介绍</p>
+    </div>
+    <div id="article_collect">
+        <p>文章收藏</p>
+    </div>
+    <div id="contribute">
+        <p>我要投稿</p>
+    </div>
+    <div id="website_description">
+        <p>网站说明</p>
+    </div>
+</div>
+<div>
+    <div id="center_panel" class="row" style="position: absolute">
+        <div id="article_panel" class="col-xs-18 col-sm-12 col-md-12" style="text-align: center">
+            <div id="title"><h1 class="jian" id="article_title">故乡的炊烟</h1></div>
+            <div id="text" class="text">
+                <p id="text_content">
+                    清晨，我在海陵岛乡村的道路上晨练。突然被附近民居里飘出的炊烟所陶醉，多么亲切的炊烟啊!多年不见了，它缥缈如云，朦胧似梦，此刻，它让我不知自己身在何处何时，恍惚又回到了故乡，回到了童年……
+
+
+                    　　许多年前，在故乡的每一座瓦房或茅草房的前边，都有一根矗立的烟囱。
+
+
+                    　　站在防洪堤上，将目光凝聚在我的村庄，就会看到几十根、甚至上百根烟囱里冒出来的青烟，这样的景象，比任何一幅山水风景画都壮观十倍。
+
+
+                    　　小时候，天刚亮，母亲就会系上围裙点燃起灶火，瞬间我家烟囱里的炊烟袅袅升起。灶坑前，火光映红了母亲的脸，她把一根根柴禾添进炉膛，将锅里的水烧沸。不一会，我就吃上了热乎乎的饭菜，然后，背着书包高高兴兴上学去。
+
+
+                    （古榕树下 www.enjoybar.com）
+
+                    　　后来，我去县城读高中。有时一个月才回家一次，每次回来，远远地看见村庄周围的树林里弥漫的炊烟，我总是会不由自主地加快回家的步伐。因为我知道：炊烟里有柴草的味道，夹杂着淡淡葱花、辣椒的飘香和着诱人的饭香。
+
+
+                    　　故乡的土地上长满了庄稼，有水稻、棉花、油菜和高粱，它们都是乡亲们赖以生存和用以解决温饱问题的食粮。秋收过后，像水稻杆，棉花杆，乡亲们的家里屋外都堆满了这些柴草，用它们来煮熟庄户人家的一日三餐。
+
+
+                    　　早晨，当一家烟囱里的炊烟升起，袅袅炊烟随着轻风升腾起来。于是，二大爷家的，大伯家的，三婶家的，不多时，整个村庄都充满了浓浓的生活气味：“咵咵咵”的切菜声、“噼噼啪啪”的柴火声，红红的灶膛、浓浓的炊烟……
+
+
+                    　　伴随着初升的太阳，缕缕炊烟掠过屋顶，如雾般随风飘荡，在故乡的上空打着旋，转着圈，像恋家的游子一样，舍不得离开却又不得不走，它们亲密地拥抱着、追逐着、嬉戏着，你扯它的衣服、它拉你的手，一起向高处、向远处，越走越淡，散也散在一起。
+
+
+                    　　炊烟从未离开村庄，它们的气息游走在房檐下、缠绕在南瓜藤的茎蔓间、萦纡在树梢上、掩藏在草垛里，回荡在鸟鸣中，还有那村边悠哉哉游流淌着的小溪底，那一块鹅卵石与另一块鹅卵石的缝隙间……
+
+
+                    　　炊烟总是让人感觉温暖的，那烟火的味道和着饭香，让远行的人感到安心。无论你走多远、离开多久，当你看到那片炊烟，你就会知道：房檐还在、南瓜藤还在、树梢还在、草垛还在，还有你所钟爱的鸟鸣与鹅卵石、养育你的村庄与土地、看着你长大的父老乡亲都还在。
+
+
+                    　　很久以前，父亲手指炊烟对我说：“人活着就是要像这炊烟，向高处走，向远方走。”从那时起，我就记住了父亲远望的目光，记住了炊烟的方向，记住了头顶那一片纯净湛蓝的天空。
+
+
+                    　　我一直想，我离开炊烟的时候，一定要是满怀希望的，我相信连那无言的炊烟都会为我感到骄傲！
+
+
+                    　　后来，我如愿远行。从故乡到县城上高中，从县城到省城读大学，又从省城到广州工作……
+
+
+                    　　我在我和炊烟都憧憬的城市里，奔波于生活，浪迹在异乡，艰难地在城市里穿行着。但是，我在灯红酒绿、推杯换盏中，总会时时怀念起故乡，怀念起那炊烟飘动的村庄。远离了村庄的炊烟，我的生命似乎成了一条断流的河，一块荒芜的田地。只有炊烟，以及村庄里那些与炊烟站在一起的风物，才能让我的生命保持长久的美感、幸福和丰盈。
+
+
+                    　　去年冬天，我回老家探望母亲，正好赶上红薯成熟的时节，母亲幸福地对我说:“九满，你小时候最喜欢吃烤红薯了，给你烤两个吧!”那天，母亲在土灶里烤着红薯，小心谨慎、翻来覆去慢慢烤，生怕稍不留神就会把红薯烤糊烧黑。红薯烤熟的时候，母亲长叹一声:“唉！人老了，手脚不麻利了，还是烤糊了。”母亲的神态，就像一个犯了错误的孩子。我吃着母亲亲手烤制的红薯，泪水在我的眼眶里打转，我知道，这烤红薯分明是一颗拳拳的慈母之心啊!
+
+
+                    　　每一次离家前，母亲一大清早就会在厨房里给我煮鸡蛋、做面条，还有我最喜欢吃的故乡风味。我也会守在母亲的身边，帮她老人家打理着灶火，炊烟飘满了整个厨房，炊烟的味道是呛人的。此刻，不知道我的泪水和母亲的泪水是被炊烟呛出来的，还是用炊烟来掩饰心里的离别忧伤……
+
+
+                    　　多少年来，那淡淡妖娆的炊烟一直轻盈飘渺在我的记忆中，它如一幅永不褪色的多彩画卷，定格在我的心里，缠绕在我的心头，牵引着我思乡的脚步。不管我回到故乡还是行走到异国他乡，只要看到那飘悠升起的炊烟，闻到空中散发燃烧柴草的清香，我的心中就会感觉到少有的温馨。
+
+                    清晨，我在海陵岛乡村的道路上晨练。突然被附近民居里飘出的炊烟所陶醉，多么亲切的炊烟啊!多年不见了，它缥缈如云，朦胧似梦，此刻，它让我不知自己身在何处何时，恍惚又回到了故乡，回到了童年……
+
+
+                    　　许多年前，在故乡的每一座瓦房或茅草房的前边，都有一根矗立的烟囱。
+
+
+                    　　站在防洪堤上，将目光凝聚在我的村庄，就会看到几十根、甚至上百根烟囱里冒出来的青烟，这样的景象，比任何一幅山水风景画都壮观十倍。
+
+
+                    　　小时候，天刚亮，母亲就会系上围裙点燃起灶火，瞬间我家烟囱里的炊烟袅袅升起。灶坑前，火光映红了母亲的脸，她把一根根柴禾添进炉膛，将锅里的水烧沸。不一会，我就吃上了热乎乎的饭菜，然后，背着书包高高兴兴上学去。
+
+
+                    （古榕树下 www.enjoybar.com）
+
+                    　　后来，我去县城读高中。有时一个月才回家一次，每次回来，远远地看见村庄周围的树林里弥漫的炊烟，我总是会不由自主地加快回家的步伐。因为我知道：炊烟里有柴草的味道，夹杂着淡淡葱花、辣椒的飘香和着诱人的饭香。
+
+
+                    　　故乡的土地上长满了庄稼，有水稻、棉花、油菜和高粱，它们都是乡亲们赖以生存和用以解决温饱问题的食粮。秋收过后，像水稻杆，棉花杆，乡亲们的家里屋外都堆满了这些柴草，用它们来煮熟庄户人家的一日三餐。
+
+
+                    　　早晨，当一家烟囱里的炊烟升起，袅袅炊烟随着轻风升腾起来。于是，二大爷家的，大伯家的，三婶家的，不多时，整个村庄都充满了浓浓的生活气味：“咵咵咵”的切菜声、“噼噼啪啪”的柴火声，红红的灶膛、浓浓的炊烟……
+
+
+                    　　伴随着初升的太阳，缕缕炊烟掠过屋顶，如雾般随风飘荡，在故乡的上空打着旋，转着圈，像恋家的游子一样，舍不得离开却又不得不走，它们亲密地拥抱着、追逐着、嬉戏着，你扯它的衣服、它拉你的手，一起向高处、向远处，越走越淡，散也散在一起。
+
+
+                    　　炊烟从未离开村庄，它们的气息游走在房檐下、缠绕在南瓜藤的茎蔓间、萦纡在树梢上、掩藏在草垛里，回荡在鸟鸣中，还有那村边悠哉哉游流淌着的小溪底，那一块鹅卵石与另一块鹅卵石的缝隙间……
+
+
+                    　　炊烟总是让人感觉温暖的，那烟火的味道和着饭香，让远行的人感到安心。无论你走多远、离开多久，当你看到那片炊烟，你就会知道：房檐还在、南瓜藤还在、树梢还在、草垛还在，还有你所钟爱的鸟鸣与鹅卵石、养育你的村庄与土地、看着你长大的父老乡亲都还在。
+
+
+                    　　很久以前，父亲手指炊烟对我说：“人活着就是要像这炊烟，向高处走，向远方走。”从那时起，我就记住了父亲远望的目光，记住了炊烟的方向，记住了头顶那一片纯净湛蓝的天空。
+
+
+                    　　我一直想，我离开炊烟的时候，一定要是满怀希望的，我相信连那无言的炊烟都会为我感到骄傲！
+
+
+                    　　后来，我如愿远行。从故乡到县城上高中，从县城到省城读大学，又从省城到广州工作……
+
+
+                    　　我在我和炊烟都憧憬的城市里，奔波于生活，浪迹在异乡，艰难地在城市里穿行着。但是，我在灯红酒绿、推杯换盏中，总会时时怀念起故乡，怀念起那炊烟飘动的村庄。远离了村庄的炊烟，我的生命似乎成了一条断流的河，一块荒芜的田地。只有炊烟，以及村庄里那些与炊烟站在一起的风物，才能让我的生命保持长久的美感、幸福和丰盈。
+
+
+                    　　去年冬天，我回老家探望母亲，正好赶上红薯成熟的时节，母亲幸福地对我说:“九满，你小时候最喜欢吃烤红薯了，给你烤两个吧!”那天，母亲在土灶里烤着红薯，小心谨慎、翻来覆去慢慢烤，生怕稍不留神就会把红薯烤糊烧黑。红薯烤熟的时候，母亲长叹一声:“唉！人老了，手脚不麻利了，还是烤糊了。”母亲的神态，就像一个犯了错误的孩子。我吃着母亲亲手烤制的红薯，泪水在我的眼眶里打转，我知道，这烤红薯分明是一颗拳拳的慈母之心啊!
+
+
+                    　　每一次离家前，母亲一大清早就会在厨房里给我煮鸡蛋、做面条，还有我最喜欢吃的故乡风味。我也会守在母亲的身边，帮她老人家打理着灶火，炊烟飘满了整个厨房，炊烟的味道是呛人的。此刻，不知道我的泪水和母亲的泪水是被炊烟呛出来的，还是用炊烟来掩饰心里的离别忧伤……
+
+
+                    　　多少年来，那淡淡妖娆的炊烟一直轻盈飘渺在我的记忆中，它如一幅永不褪色的多彩画卷，定格在我的心里，缠绕在我的心头，牵引着我思乡的脚步。不管我回到故乡还是行走到异国他乡，只要看到那飘悠升起的炊烟，闻到空中散发燃烧柴草的清香，我的心中就会感觉到少有的温馨。
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="bottom_panel" class="row-fluid" style="line-height: 58px;">
+        <div id="bottom_panel_display">
+            <div id="bottom_index_panel" class="col-xs-4 col-sm-4 col-md-4"
+                 style="background: #A2C8DB;text-align: center;border-right: #777777 1px solid">
+                首页
+            </div>
+            <div id="bottom_article_panel" class="col-xs-4 col-sm-4 col-md-4"
+                 style="background: #A2C8DB;text-align: center;border-right: #777777 1px solid">
+                深度好文
+            </div>
+            <div id="bottom_message_panel" class="col-xs-4 col-sm-4 col-md-4"
+                 style="background: #A2C8DB;text-align: center;border-right: #777777 1px solid">
+                留言墙
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script>
+    $(function () {
+        $.ajax({
+            url: "/article/getData",
+            type: "GET",
+            data: {},
+            success: function (result) {
+                $("#article_title").text(result.title)
+                $("#text_content").html("&emsp;&nbsp;&nbsp;" + result.content)
+            }
+        });
+    });
+    //首页
+    $("#bottom_index_panel").click(function () {
+        location.href = "/index/show"
+    })
+    //留言墙
+    $("#bottom_message_panel").click(function () {
+        location.href = "/message/wall";
+    })
+
+    var top_pos = $('#top_panel').offset();// offset() 获得div1当前的位置，左上角坐标(x,y)
+    $(window).scroll(function () { //滚动条滚动事件
+        if ($(this).scrollTop() > top_pos.top) {
+            $('#top_panel').css('top', $(this).scrollTop() - top_pos.top);
+        } else if ($(this).scrollTop() <= top_pos.top) {
+            $('#top_panel').css('top', 0).css('position', 'relative');
+        }
+    });
+
+    function changStatus() {
+        $("#bottom_panel_display").attr("style", "display:none");
+    };
+    setInterval("changStatus()", 5000);
+    // setTimeout(function(){$("#bottom_display").attr("style","display:none");},3000);
+
+    //点击空白处显示底部导航栏
+    $(document).mouseup(function (e) {
+        var _con = $('#text_content'); // 设置目标区域
+        var _con1 = $("#top_panel");
+        var _con2 = $("#bottom_panel");
+        if (!_con.is(e.target) && _con.has(e.target).length === 0 && !_con1.is(e.target) && _con1.has(e.target).length === 0 && !_con2.is(e.target) && _con2.has(e.target).length === 0) {
+            // $("#bottom_panel").attr("style","display:none")
+            $("#bottom_panel_display").show();
+        }
+    });
+
+    //个人信息
+    $("#author_message").click(function () {
+        $("#leftNav").show();
+    })
+
+    //点击指定位置收起侧边栏
+    $(document).mouseup(function (e) {
+        var _con = $('#leftNav'); // 设置目标区域
+        if (!_con.is(e.target) && _con.has(e.target).length === 0 ) {
+            // $("#bottom_panel").attr("style","display:none")
+            $("#leftNav").attr("style","display:none");
+        }
+    });
+</script>
+
+</html>

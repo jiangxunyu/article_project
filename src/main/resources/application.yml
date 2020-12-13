@@ -1,0 +1,11 @@
+server:
+  port: 80
+  servlet:
+    application-display-name: article-show
+spring:
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: classpath:/templates/
+  thymeleaf:
+    cache: false
